@@ -1,0 +1,13 @@
+[Unit]
+Description=Dummy Background Service
+After=network.target
+
+[Service]
+ExecStart=/bin/bash /home/name/dummy.sh
+Restart=always
+RestartSec=5
+StandardOutput=null
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
